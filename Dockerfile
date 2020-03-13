@@ -138,6 +138,12 @@ RUN \
         && rm -rf /var/lib/apt/lists/* \
         ; \
     fi
+   
+RUN \
+    echo "Installing AWS-CLI" \
+    ; \
+    pip install awscli
+    
 
 COPY entrypoint.sh /entrypoint.sh
 
